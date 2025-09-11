@@ -1,16 +1,65 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import RightSidebar from '../components/RightSidebar.astro';
+import ToolCard from '../components/ToolCard.astro';
+import toolsData from '../data/directory.json';
+import type { Tool } from '../types';
 
+// Cast the imported JSON to our Tool array type
+const tools: Tool[] = toolsData as Tool[];
+
+// Helper to create a URL-friendly ID from a category name
+const createCategoryId = (category: string) => category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+const toolsByCategory = tools.reduce((acc: Record<string, Tool[]>, tool) => {
+    const { category } = tool;
+    if (!acc[category]) {
+        acc[category] = [];
+    }
+    acc[category].push(tool);
+    return acc;
+}, {});
+
+const categories = Object.keys(toolsByCategory);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Cloud Monitoring Platforms">
+    <div class="container mx-auto flex flex-col md:flex-row gap-8 px-4 py-8">
+        
+        <div class="w-full md:w-8/12 lg:w-9/12"> {/* Adjusted width for main content */}
+            <h1 class="text-4xl font-bold mb-4">Cloud Monitoring Platforms</h1>
+            <h4 class="text-xl text-gray-600 mb-6">Search cloud monitoring platforms</h4>
+            <div class="mb-12 flex flex-col sm:flex-row gap-2"> {/* Responsive search bar layout */}
+                <input type="search" placeholder="Search..." class="w-full sm:w-auto p-3 border rounded-md focus:ring-blue-500 focus:border-blue-500 flex-grow">
+                <button class="bg-blue-600 text-white px-5 py-3 rounded-md hover:bg-blue-700 transition-colors duration-200">Search</button>
+            </div>
+
+            {Object.entries(toolsByCategory).map(([category, categoryTools]) => (
+                <section id={createCategoryId(category)} class="mb-12 scroll-mt-20">
+                    <h2 class="text-3xl font-semibold mb-6 border-b pb-2">{category}</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {/* Adjusted grid for tool cards */}
+                        {categoryTools.map(tool => (
+                            <ToolCard
+                                title={tool.title}
+                                link={tool.link}
+                                description={tool.description}
+                                image={tool.image}
+                            />
+                        ))}
+                    </div>
+                </section>
+            ))}
+        </div>
+
+        
+        <div class="w-full md:w-4/12 lg:w-3/12"> {/* Adjusted width for sidebar */}
+            <RightSidebar categories={categories} />
+        </div>
+    </div>
+</Layout>
+
+<style>
+  .scroll-mt-20 {
+    scroll-margin-top: 5rem;
+  }
+</style>

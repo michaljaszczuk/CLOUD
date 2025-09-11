@@ -1,0 +1,21 @@
+---
+// src/components/ToolCard.astro
+import type { Tool } from '../types';
+
+// Use Pick to select only the props this component needs from the main Tool type
+export type Props = Pick<Tool, 'title' | 'link' | 'description' | 'image'>;
+
+const { title, link, description, image } = Astro.props;
+---
+<div class="border rounded-lg overflow-hidden shadow-lg bg-white flex flex-col">
+    <a href={link} target="_blank" rel="noopener noreferrer">
+        <img class="w-full h-32 object-cover" src={image} alt={`${title} logo`} />
+    </a>
+    <div class="p-4 flex flex-col flex-grow">
+        <h3 class="font-bold text-xl mb-2">{title}</h3>
+        <p class="text-gray-700 text-base mb-4 flex-grow">{description}</p>
+        <a href={link} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline mt-auto">
+            Visit Tool
+        </a>
+    </div>
+</div>

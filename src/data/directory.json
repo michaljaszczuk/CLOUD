@@ -1,0 +1,583 @@
+[
+  {
+    "id": "zabbix",
+    "title": "Zabbix",
+    "image": "../images/calm.png",
+    "link": "https://www.zabbix.com",
+    "category": "Infrastructure & Performance Monitoring",
+    "tags": [
+      "Open Source",
+      "Free",
+      "Self-hosted",
+      "On-premises",
+      "All Sizes",
+      "Infrastructure & Performance Monitoring"
+    ],
+    "description": "Network monitoring, server monitoring, SNMP, auto-discovery. Notable for being highly scalable, with an extensive plugin ecosystem."
+  },
+  {
+    "id": "nagios",
+    "title": "Nagios",
+    "image": "../images/calm.png",
+    "link": "https://www.nagios.com/products/nagios-xi",
+    "category": "Infrastructure & Performance Monitoring",
+    "tags": [
+      "Open Source",
+      "Commercial",
+      "Self-hosted",
+      "SMB",
+      "Enterprise",
+      "Infrastructure & Performance Monitoring"
+    ],
+    "description": "Host/service monitoring, alerting, plugin architecture. Notable for its mature ecosystem and being highly customizable. "
+  },
+  {
+    "id": "prtg-network-monitor",
+    "title": "PRTG Network Monitor",
+    "image": "../images/calm.png",
+    "link": "https://www.paessler.com/prtg",
+    "category": "Infrastructure & Performance Monitoring",
+    "tags": [
+      "Commercial",
+      "On-premises",
+      "Cloud",
+      "SMB",
+      "Enterprise",
+      "Freemium",
+      "Infrastructure & Performance Monitoring"
+    ],
+    "description": "Sensor-based monitoring, drag-drop interface, auto-discovery. Notable for its user-friendly interface and being an all-in-one solution."
+  },
+  {
+    "id": "solarwinds-npm",
+    "title": "SolarWinds NPM",
+    "image": "../images/calm.png",
+    "link": "https://www.solarwinds.com",
+    "category": "Infrastructure & Performance Monitoring",
+    "tags": [
+      "Commercial",
+      "On-premises",
+      "Hybrid",
+      "Enterprise",
+      "Subscription-based",
+      "Infrastructure & Performance Monitoring"
+    ],
+    "description": "Network performance monitoring, topology mapping, advanced analytics. Notable for its enterprise-grade features and modular architecture."
+  },
+  {
+    "id": "manageengine-opmanager",
+    "title": "ManageEngine OpManager",
+    "image": "../images/calm.png",
+    "link": "https://www.manageengine.com",
+    "category": "Infrastructure & Performance Monitoring",
+    "tags": [
+      "Commercial",
+      "On-premises",
+      "Cloud",
+      "SMB",
+      "Enterprise",
+      "Per Device",
+      "Infrastructure & Performance Monitoring"
+    ],
+    "description": "Network monitoring, server monitoring, workflow automation. Notable for offering cost-effective enterprise features."
+  },
+  {
+    "id": "new-relic",
+    "title": "New Relic",
+    "image": "../images/new-relic-logo-png_seeklogo-441431.png",
+    "link": "https://newrelic.com",
+    "category": "Application Performance Monitoring (APM)",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Consumption-based",
+      "Application Performance Monitoring (APM)"
+    ],
+    "description": "Full-stack observability, APM, real user monitoring, synthetic monitoring. Notable for being a comprehensive and developer-friendly platform.",
+    "featured": true
+  },
+  {
+    "id": "appdynamics",
+    "title": "AppDynamics",
+    "image": "../images/calm.png",
+    "link": "https://www.appdynamics.com",
+    "category": "Application Performance Monitoring (APM)",
+    "tags": [
+      "SaaS",
+      "On-premises",
+      "Hybrid",
+      "Enterprise",
+      "Per CPU Core",
+      "Application Performance Monitoring (APM)"
+    ],
+    "description": "Business transaction monitoring, code-level diagnostics, AI-powered analytics. Notable for its business context correlation and enterprise focus."
+  },
+  {
+    "id": "dynatrace",
+    "title": "Dynatrace",
+    "image": "../images/dynatrace-logo-png_seeklogo-492168.png",
+    "link": "https://www.dynatrace.com",
+    "category": "Application Performance Monitoring (APM)",
+    "tags": [
+      "SaaS",
+      "Managed",
+      "Cloud",
+      "Enterprise",
+      "Per Host",
+      "Application Performance Monitoring (APM)"
+    ],
+    "description": "AI-powered monitoring, automated root cause analysis, full-stack observability. Notable for its Davis AI engine and automated problem detection.",
+    "featured": true
+  },
+  {
+    "id": "datadog",
+    "title": "Datadog",
+    "image": "../images/datadog-logo-png_seeklogo-349920.png",
+    "link": "https://www.datadoghq.com",
+    "category": "Application Performance Monitoring (APM)",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Per Host",
+      "Per Feature",
+      "Application Performance Monitoring (APM)"
+    ],
+    "description": "Unified observability, APM, infrastructure monitoring, log management. Notable for its 850+ integrations and unified platform.",
+    "featured": true
+  },
+  {
+    "id": "elastic-apm",
+    "title": "Elastic APM",
+    "image": "../images/calm.png",
+    "link": "https://www.elastic.co/what-is/elk-stack",
+    "category": "Application Performance Monitoring (APM)",
+    "tags": [
+      "Open Source",
+      "Commercial",
+      "Self-hosted",
+      "Cloud",
+      "All Sizes",
+      "Subscription",
+      "Application Performance Monitoring (APM)"
+    ],
+    "description": "Distributed tracing, performance monitoring, integrates with ELK Stack. Notable for being part of the Elastic Stack and being cost-effective."
+  },
+  {
+    "id": "grafana",
+    "title": "Grafana",
+    "image": "../images/calm.png",
+    "link": "https://grafana.com/products/cloud",
+    "category": "Observability & Analytics Platforms",
+    "tags": [
+      "Open Source",
+      "Commercial",
+      "Self-hosted",
+      "Cloud",
+      "All Sizes",
+      "Free",
+      "Subscription",
+      "Observability & Analytics Platforms"
+    ],
+    "description": "Data visualization, dashboards, alerting, multi-source data. Notable for its visualization excellence and extensive data source support.",
+    "featured": true
+  },
+  {
+    "id": "prometheus",
+    "title": "Prometheus",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Observability & Analytics Platforms",
+    "tags": [
+      "Open Source",
+      "Self-hosted",
+      "All Sizes",
+      "Free",
+      "Observability & Analytics Platforms"
+    ],
+    "description": "Metrics collection, time-series database, alerting. Notable for being a cloud-native monitoring CNCF project."
+  },
+  {
+    "id": "jaeger",
+    "title": "Jaeger",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Observability & Analytics Platforms",
+    "tags": [
+      "Open Source",
+      "Self-hosted",
+      "All Sizes",
+      "Free",
+      "Observability & Analytics Platforms"
+    ],
+    "description": "Distributed tracing, performance monitoring, root cause analysis. Notable for being a distributed tracing specialist and a CNCF project."
+  },
+  {
+    "id": "honeycomb",
+    "title": "Honeycomb",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Observability & Analytics Platforms",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "SMB",
+      "Enterprise",
+      "Usage-based",
+      "Observability & Analytics Platforms"
+    ],
+    "description": "High-cardinality observability, query-driven debugging, distributed tracing. Notable for its modern observability approach and high-cardinality data."
+  },
+  {
+    "id": "middleware",
+    "title": "Middleware",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Observability & Analytics Platforms",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Subscription-based",
+      "Observability & Analytics Platforms"
+    ],
+    "description": "Full-stack observability, AI querying, LLM monitoring. Notable for its AI-powered features and modern platform."
+  },
+  {
+    "id": "pingdom",
+    "title": "Pingdom",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Uptime & Availability Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Per Monitor",
+      "Uptime & Availability Monitoring"
+    ],
+    "description": "Uptime monitoring, synthetic monitoring, RUM, performance insights. Notable for its global monitoring network and being backed by SolarWinds."
+  },
+  {
+    "id": "uptimerobot",
+    "title": "UptimeRobot",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Uptime & Availability Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Freemium",
+      "Uptime & Availability Monitoring"
+    ],
+    "description": "Website monitoring, SSL monitoring, status pages, multi-location checks. Notable for its available free tier and simple setup."
+  },
+  {
+    "id": "site24x7",
+    "title": "Site24x7",
+    "image": "../images/calm.png",
+    "link": "https://www.site24x7.com",
+    "category": "Uptime & Availability Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Per Monitor",
+      "Uptime & Availability Monitoring"
+    ],
+    "description": "Synthetic monitoring, uptime monitoring, APM, infrastructure monitoring. Notable for its comprehensive monitoring suite and 130+ monitoring locations."
+  },
+  {
+    "id": "checkly",
+    "title": "Checkly",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Uptime & Availability Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "Developer-focused",
+      "Per Check",
+      "Uptime & Availability Monitoring"
+    ],
+    "description": "Monitoring as code, Playwright integration, API monitoring. Notable for being developer-centric with monitoring as code."
+  },
+  {
+    "id": "statuscake",
+    "title": "StatusCake",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Uptime & Availability Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Freemium",
+      "Uptime & Availability Monitoring"
+    ],
+    "description": "Uptime monitoring, page speed monitoring, virus scanning. Notable for its affordable pricing and virus scanning feature."
+  },
+  {
+    "id": "splunk",
+    "title": "Splunk",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Log Management & Analytics",
+    "tags": [
+      "Commercial",
+      "On-premises",
+      "Cloud",
+      "Enterprise",
+      "Data Volume-based",
+      "Log Management & Analytics"
+    ],
+    "description": "Log analysis, SIEM, machine learning, real-time search. Notable for its enterprise security focus and powerful search capabilities."
+  },
+  {
+    "id": "elastic-stack-(elk)",
+    "title": "Elastic Stack (ELK)",
+    "image": "../images/calm.png",
+    "link": "https://www.elastic.co/what-is/elk-stack",
+    "category": "Log Management & Analytics",
+    "tags": [
+      "Open Source",
+      "Commercial",
+      "Self-hosted",
+      "Cloud",
+      "All Sizes",
+      "Subscription",
+      "Log Management & Analytics"
+    ],
+    "description": "Log aggregation, search, visualization, real-time analytics. Notable for its open source flexibility and powerful search."
+  },
+  {
+    "id": "fluentd",
+    "title": "Fluentd",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Log Management & Analytics",
+    "tags": [
+      "Open Source",
+      "Self-hosted",
+      "All Sizes",
+      "Free",
+      "Log Management & Analytics"
+    ],
+    "description": "Log collection, data routing, plugin ecosystem. Notable for being a unified logging layer and a CNCF project."
+  },
+  {
+    "id": "logz.io",
+    "title": "Logz.io",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Log Management & Analytics",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Data Volume-based",
+      "Log Management & Analytics"
+    ],
+    "description": "ELK as a service, AI-powered insights, security analytics. Notable for being a managed ELK service with AI features."
+  },
+  {
+    "id": "aws-cloudwatch",
+    "title": "AWS CloudWatch",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Cloud-Native Monitoring",
+    "tags": [
+      "Cloud Provider",
+      "AWS Cloud",
+      "All Sizes",
+      "Usage-based",
+      "Cloud-Native Monitoring"
+    ],
+    "description": "AWS native monitoring, metrics, logs, alarms, dashboards. Notable for its native AWS integration and comprehensive AWS coverage. "
+  },
+  {
+    "id": "azure-monitor",
+    "title": "Azure Monitor",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Cloud-Native Monitoring",
+    "tags": [
+      "Cloud Provider",
+      "Azure Cloud",
+      "All Sizes",
+      "Pay-as-you-go",
+      "Cloud-Native Monitoring"
+    ],
+    "description": "Azure native monitoring, Log Analytics, Application Insights. Notable for its native Azure integration and KQL query language. "
+  },
+  {
+    "id": "google-cloud-monitoring",
+    "title": "Google Cloud Monitoring",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Cloud-Native Monitoring",
+    "tags": [
+      "Cloud Provider",
+      "GCP Cloud",
+      "All Sizes",
+      "Usage-based",
+      "Cloud-Native Monitoring"
+    ],
+    "description": "GCP native monitoring, custom metrics, alerting policies. Notable for its native GCP integration and machine learning insights. "
+  },
+  {
+    "id": "wiz",
+    "title": "Wiz",
+    "image": "../images/calm.png",
+    "link": "https://www.wiz.io",
+    "category": "Security & Compliance Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "Enterprise",
+      "Subscription-based",
+      "Security & Compliance Monitoring"
+    ],
+    "description": "CNAPP, CSPM, agentless scanning, attack path analysis. Notable for its comprehensive cloud security and attack path visualization."
+  },
+  {
+    "id": "prisma-cloud",
+    "title": "Prisma Cloud",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Security & Compliance Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "Enterprise",
+      "Per Workload",
+      "Security & Compliance Monitoring"
+    ],
+    "description": "CWPP, CSPM, compliance monitoring, threat detection. Notable for being a Palo Alto Networks platform with comprehensive security."
+  },
+  {
+    "id": "aqua-security",
+    "title": "Aqua Security",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Security & Compliance Monitoring",
+    "tags": [
+      "SaaS",
+      "On-premises",
+      "Hybrid",
+      "Enterprise",
+      "Per Workload",
+      "Security & Compliance Monitoring"
+    ],
+    "description": "Container security, runtime protection, compliance scanning. Notable for its container security focus and runtime protection. "
+  },
+  {
+    "id": "cloudzero",
+    "title": "CloudZero",
+    "image": "../images/clou",
+    "link": "https://www.cloudzero.com",
+    "category": "Cost Management & FinOps",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Subscription-based",
+      "Cost Management & FinOps"
+    ],
+    "description": "Unit cost analysis, cost allocation without tags, anomaly detection. Notable for its tagless cost allocation and engineering-focus.",
+    "featured": true
+  },
+  {
+    "id": "finout",
+    "title": "Finout",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Cost Management & FinOps",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "Enterprise",
+      "Subscription-based",
+      "Cost Management & FinOps"
+    ],
+    "description": "Virtual tagging, MegaBill, multi-cloud cost management. Notable for its virtual tagging technology and enterprise focus."
+  },
+  {
+    "id": "cloudhealth-by-vmware",
+    "title": "CloudHealth by VMware",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Cost Management & FinOps",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "Enterprise",
+      "Percentage of Spend",
+      "Cost Management & FinOps"
+    ],
+    "description": "Cost optimization, governance, policy management. Notable for its VMware integration and enterprise governance."
+  },
+  {
+    "id": "flexera-one",
+    "title": "Flexera One",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Cost Management & FinOps",
+    "tags": [
+      "SaaS",
+      "On-premises",
+      "Hybrid",
+      "Enterprise",
+      "Subscription-based",
+      "Cost Management & FinOps"
+    ],
+    "description": "ITAM, software licensing, cloud cost management. Notable for its comprehensive IT asset management."
+  },
+  {
+    "id": "synthetic-monitoring---checkly",
+    "title": "Synthetic Monitoring - Checkly",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Synthetic Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "Developer-focused",
+      "Per Check",
+      "Synthetic Monitoring"
+    ],
+    "description": "Monitoring as code, Playwright tests, API monitoring. Notable for its developer workflow integration."
+  },
+  {
+    "id": "synthetic-monitoring---datadog",
+    "title": "Synthetic Monitoring - Datadog",
+    "image": "../images/datadog-logo-png_seeklogo-349920.png",
+    "link": "https://www.datadoghq.com",
+    "category": "Synthetic Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "All Sizes",
+      "Per Test",
+      "Synthetic Monitoring"
+    ],
+    "description": "Browser tests, API tests, mobile app testing. Notable for being part of the unified Datadog platform."
+  },
+  {
+    "id": "ghost-inspector",
+    "title": "Ghost Inspector",
+    "image": "../images/placeholder.png",
+    "link": "https://example.com",
+    "category": "Synthetic Monitoring",
+    "tags": [
+      "SaaS",
+      "Cloud",
+      "SMB",
+      "Per Test",
+      "Synthetic Monitoring"
+    ],
+    "description": "Website testing, automated regression testing, CI/CD integration. Notable for its easy test creation and regression testing focus."
+  }
+]
