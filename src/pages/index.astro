@@ -6,7 +6,6 @@ import toolsData from '../data/directory.json';
 import type { Tool } from '../types';
 
 const tools: Tool[] = toolsData as Tool[];
-
 const createCategoryId = (category: string) => category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
 const toolsByCategory = tools.reduce((acc: Record<string, Tool[]>, tool) => {
@@ -17,7 +16,6 @@ const toolsByCategory = tools.reduce((acc: Record<string, Tool[]>, tool) => {
     acc[category].push(tool);
     return acc;
 }, {});
-
 const categories = Object.keys(toolsByCategory);
 
 const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
@@ -31,36 +29,49 @@ const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
             <h4 class="text-xl text-gray-600 dark:text-gray-400 mb-6">Search cloud monitoring platforms</h4>
 
             <div class="mb-6">
-                <div class="flex flex-wrap gap-2">
+               
+                 <div class="flex flex-wrap gap-2">
                     {allTags.map(tag => (
                         <button class="tag-pill bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 px-2 py-0.5 text-xs rounded-full" data-tag={tag}>
                             {tag}
+        
                         </button>
                     ))}
                 </div>
             </div>
 
-            <div class="mb-12 flex flex-col sm:flex-row gap-2">
-                <input type="search" placeholder="Search..." class="w-full sm:w-auto p-2 text-sm border rounded-md focus:ring-blue-500 focus:border-blue-500 flex-grow dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+            <div class="mb-12 flex flex-col sm:flex-row gap-2 relative">
+                <input 
+                    type="search" 
+                    id="searchInput"
+                    placeholder="Search for tools..." 
+                    class="w-full sm:w-auto p-2 text-sm border rounded-md focus:ring-blue-500 focus:border-blue-500 flex-grow dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+                <div id="suggestions" class="absolute z-10 w-full mt-12 bg-white border rounded-md shadow-lg hidden"></div>
                 <button class="bg-blue-600 text-white px-4 py-2 text-sm rounded-md hover:bg-blue-700 transition-colors duration-200">Search</button>
             </div>
 
             {Object.entries(toolsByCategory).map(([category, categoryTools]) => (
                 <section id={createCategoryId(category)} class="category-section mb-12 scroll-mt-20">
+                
                     <h2 class="text-3xl font-semibold mb-6 border-b pb-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white">{category}</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
                         {categoryTools.map(tool => (
                             <div class="tool-card" data-tags={tool.tags.join(',')}>
-                                <ToolCard
+      
+                                 <ToolCard
                                     title={tool.title}
                                     link={tool.link}
+  
                                     description={tool.description}
                                     image={tool.image}
+                              
                                     tags={tool.tags}
                                 />
                             </div>
                         ))}
-                    </div>
+          
+                     </div>
                 </section>
             ))}
         </div>
@@ -78,6 +89,7 @@ const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
 </style>
 
 <script>
+    import type { Tool } from '../types';
     document.addEventListener('DOMContentLoaded', () => {
         const tagPills = document.querySelectorAll('.tag-pill') as NodeListOf<HTMLElement>;
         const categorySections = document.querySelectorAll('.category-section') as NodeListOf<HTMLElement>;
@@ -88,11 +100,13 @@ const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
 
         tagPills.forEach(pill => {
             pill.addEventListener('click', () => {
-                const tag = pill.getAttribute('data-tag');
+ 
+               const tag = pill.getAttribute('data-tag');
                 if (tag) {
                     if (selectedTags.has(tag)) {
                         selectedTags.delete(tag);
-                        pill.classList.remove(...selectedClasses);
+                  
+                       pill.classList.remove(...selectedClasses);
                         pill.classList.add(...unselectedClasses);
                     } else {
                         selectedTags.add(tag);
@@ -103,7 +117,6 @@ const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
                 }
             });
         });
-
         function filterTools() {
             categorySections.forEach(section => {
                 let visibleCardsCount = 0;
@@ -111,20 +124,58 @@ const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
 
                 toolCardsInSection.forEach(card => {
                     const toolTagsAttribute = card.getAttribute('data-tags');
+     
                     if (toolTagsAttribute) {
                         const toolTags = new Set(toolTagsAttribute.split(',').map(t => t.trim()));
                         const isVisible = selectedTags.size === 0 || [...selectedTags].every(tag => toolTags.has(tag));
+                    
                         
                         card.style.display = isVisible ? 'block' : 'none';
                         if (isVisible) {
                             visibleCardsCount++;
-                        }
+            
+                         }
                     }
                 });
 
                 const categoryHasVisibleTools = visibleCardsCount > 0;
-                section.style.display = categoryHasVisibleTools ? 'block' : 'none';
+                section.style.display = categoryHasVisibleTools ?
+                    'block' : 'none';
             });
         }
     });
+
+    const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+    const suggestionsContainer = document.getElementById('suggestions');
+    if (searchInput && suggestionsContainer) {
+        searchInput.addEventListener('input', async () => {
+            const query = searchInput.value.trim();
+
+            if (query.length < 2) {
+                suggestionsContainer.innerHTML = '';
+                suggestionsContainer.classList.add('hidden');
+      
+                 return;
+            }
+
+            const response = await fetch(`/api/search?q=${query}`);
+            const results: Tool[] = await response.json();
+
+            if (results.length > 0) {
+       
+                suggestionsContainer.innerHTML = results.map((tool: Tool) => 
+                    `<a href="${tool.link}" target="_blank" rel="noopener noreferrer" class="block p-2 hover:bg-gray-100">${tool.title}</a>`
+                ).join('');
+                suggestionsContainer.classList.remove('hidden');
+            } else {
+                suggestionsContainer.innerHTML = '<div class="p-2 text-gray-500">No results found</div>';
+                suggestionsContainer.classList.remove('hidden');
+            }
+        });
+        document.addEventListener('click', (event) => {
+            if (suggestionsContainer && !suggestionsContainer.contains(event.target as Node) && event.target !== searchInput) {
+                suggestionsContainer.classList.add('hidden');
+            }
+        });
+    }
 </script>
