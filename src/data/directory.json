@@ -2,7 +2,7 @@
   {
     "id": "zabbix",
     "title": "Zabbix",
-    "image": "../images/calm.png",
+    "image": "../images/Zabbix.png",
     "link": "https://www.zabbix.com",
     "category": "Infrastructure & Performance Monitoring",
     "tags": [
@@ -17,7 +17,7 @@
   {
     "id": "nagios",
     "title": "Nagios",
-    "image": "../images/calm.png",
+    "image": "../images/Nagios XI Network Analyzer.png",
     "link": "https://www.nagios.com/products/nagios-xi",
     "category": "Infrastructure & Performance Monitoring",
     "tags": [
@@ -32,7 +32,7 @@
   {
     "id": "prtg-network-monitor",
     "title": "PRTG Network Monitor",
-    "image": "../images/calm.png",
+    "image": "../images/Paessler PRTG Network Monitoring.png",
     "link": "https://www.paessler.com/prtg",
     "category": "Infrastructure & Performance Monitoring",
     "tags": [
@@ -48,7 +48,7 @@
   {
     "id": "solarwinds-npm",
     "title": "SolarWinds NPM",
-    "image": "../images/calm.png",
+    "image": "../images/SolarWinds.png",
     "link": "https://www.solarwinds.com",
     "category": "Infrastructure & Performance Monitoring",
     "tags": [
@@ -63,7 +63,7 @@
   {
     "id": "manageengine-opmanager",
     "title": "ManageEngine OpManager",
-    "image": "../images/calm.png",
+    "image": "../images/ManageEngine.png",
     "link": "https://www.manageengine.com",
     "category": "Infrastructure & Performance Monitoring",
     "tags": [
@@ -94,7 +94,7 @@
   {
     "id": "appdynamics",
     "title": "AppDynamics",
-    "image": "../images/calm.png",
+    "image": "../images/AppDynamics.png",
     "link": "https://www.appdynamics.com",
     "category": "Application Performance Monitoring (APM)",
     "tags": [
@@ -141,8 +141,8 @@
   {
     "id": "elastic-apm",
     "title": "Elastic APM",
-    "image": "../images/calm.png",
-    "link": "https://www.elastic.co/what-is/elk-stack",
+    "image": "../images/Elastic_ELK.png",
+    "link": "https://www.elastic.co/observability/application-performance-monitoring",
     "category": "Application Performance Monitoring (APM)",
     "tags": [
       "Open Source",
@@ -157,7 +157,7 @@
   {
     "id": "grafana",
     "title": "Grafana",
-    "image": "../images/calm.png",
+    "image": "../images/Grafana Cloud.png",
     "link": "https://grafana.com/products/cloud",
     "category": "Observability & Analytics Platforms",
     "tags": [
@@ -176,7 +176,7 @@
     "id": "prometheus",
     "title": "Prometheus",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://prometheus.io",
     "category": "Observability & Analytics Platforms",
     "tags": [
       "Open Source",
@@ -190,7 +190,7 @@
     "id": "jaeger",
     "title": "Jaeger",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.jaegertracing.io",
     "category": "Observability & Analytics Platforms",
     "tags": [
       "Open Source",
@@ -204,7 +204,7 @@
     "id": "honeycomb",
     "title": "Honeycomb",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.honeycomb.io",
     "category": "Observability & Analytics Platforms",
     "tags": [
       "SaaS",
@@ -219,7 +219,7 @@
     "id": "middleware",
     "title": "Middleware",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://middleware.io",
     "category": "Observability & Analytics Platforms",
     "tags": [
       "SaaS",
@@ -233,7 +233,7 @@
     "id": "pingdom",
     "title": "Pingdom",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.pingdom.com",
     "category": "Uptime & Availability Monitoring",
     "tags": [
       "SaaS",
@@ -247,7 +247,7 @@
     "id": "uptimerobot",
     "title": "UptimeRobot",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://uptimerobot.com",
     "category": "Uptime & Availability Monitoring",
     "tags": [
       "SaaS",
@@ -260,7 +260,7 @@
   {
     "id": "site24x7",
     "title": "Site24x7",
-    "image": "../images/calm.png",
+    "image": "../images/Site24X7.png",
     "link": "https://www.site24x7.com",
     "category": "Uptime & Availability Monitoring",
     "tags": [
@@ -275,7 +275,7 @@
     "id": "checkly",
     "title": "Checkly",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.checklyhq.com",
     "category": "Uptime & Availability Monitoring",
     "tags": [
       "SaaS",
@@ -289,7 +289,7 @@
     "id": "statuscake",
     "title": "StatusCake",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.statuscake.com",
     "category": "Uptime & Availability Monitoring",
     "tags": [
       "SaaS",
@@ -302,8 +302,8 @@
   {
     "id": "splunk",
     "title": "Splunk",
-    "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "image": "../images/splunk-logo-png_seeklogo-333673.png",
+    "link": "https://www.splunk.com",
     "category": "Log Management & Analytics",
     "tags": [
       "Commercial",
@@ -317,7 +317,7 @@
   {
     "id": "elastic-stack-(elk)",
     "title": "Elastic Stack (ELK)",
-    "image": "../images/calm.png",
+    "image": "../images/Elastic_ELK.png",
     "link": "https://www.elastic.co/what-is/elk-stack",
     "category": "Log Management & Analytics",
     "tags": [
@@ -334,7 +334,7 @@
     "id": "fluentd",
     "title": "Fluentd",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.fluentd.org",
     "category": "Log Management & Analytics",
     "tags": [
       "Open Source",
@@ -348,7 +348,7 @@
     "id": "logz.io",
     "title": "Logz.io",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://logz.io",
     "category": "Log Management & Analytics",
     "tags": [
       "SaaS",
@@ -361,8 +361,8 @@
   {
     "id": "aws-cloudwatch",
     "title": "AWS CloudWatch",
-    "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "image": "../image/aws.png",
+    "link": "https://aws.amazon.com/cloudwatch/",
     "category": "Cloud-Native Monitoring",
     "tags": [
       "Cloud Provider",
@@ -376,7 +376,7 @@
     "id": "azure-monitor",
     "title": "Azure Monitor",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://azure.microsoft.com/en-us/products/monitor",
     "category": "Cloud-Native Monitoring",
     "tags": [
       "Cloud Provider",
@@ -390,7 +390,7 @@
     "id": "google-cloud-monitoring",
     "title": "Google Cloud Monitoring",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://cloud.google.com/monitoring",
     "category": "Cloud-Native Monitoring",
     "tags": [
       "Cloud Provider",
@@ -403,7 +403,7 @@
   {
     "id": "wiz",
     "title": "Wiz",
-    "image": "../images/calm.png",
+    "image": "../images/Wiz.png",
     "link": "https://www.wiz.io",
     "category": "Security & Compliance Monitoring",
     "tags": [
@@ -418,7 +418,7 @@
     "id": "prisma-cloud",
     "title": "Prisma Cloud",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.paloaltonetworks.com/prisma/cloud",
     "category": "Security & Compliance Monitoring",
     "tags": [
       "SaaS",
@@ -432,7 +432,7 @@
     "id": "aqua-security",
     "title": "Aqua Security",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.aquasec.com",
     "category": "Security & Compliance Monitoring",
     "tags": [
       "SaaS",
@@ -446,7 +446,7 @@
   {
     "id": "cloudzero",
     "title": "CloudZero",
-    "image": "../images/clou",
+    "image": "../images/cloudzero.png",
     "link": "https://www.cloudzero.com",
     "category": "Cost Management & FinOps",
     "tags": [
@@ -462,7 +462,7 @@
     "id": "finout",
     "title": "Finout",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://finout.io",
     "category": "Cost Management & FinOps",
     "tags": [
       "SaaS",
@@ -476,7 +476,7 @@
     "id": "cloudhealth-by-vmware",
     "title": "CloudHealth by VMware",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://cloudhealth.vmware.com",
     "category": "Cost Management & FinOps",
     "tags": [
       "SaaS",
@@ -490,7 +490,7 @@
     "id": "flexera-one",
     "title": "Flexera One",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.flexera.com/products/flexera-one.html",
     "category": "Cost Management & FinOps",
     "tags": [
       "SaaS",
@@ -505,7 +505,7 @@
     "id": "synthetic-monitoring---checkly",
     "title": "Synthetic Monitoring - Checkly",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://www.checklyhq.com",
     "category": "Synthetic Monitoring",
     "tags": [
       "SaaS",
@@ -533,7 +533,7 @@
     "id": "ghost-inspector",
     "title": "Ghost Inspector",
     "image": "../images/placeholder.png",
-    "link": "https://example.com",
+    "link": "https://ghostinspector.com",
     "category": "Synthetic Monitoring",
     "tags": [
       "SaaS",
