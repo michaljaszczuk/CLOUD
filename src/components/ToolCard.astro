@@ -2,19 +2,23 @@
 // src/components/ToolCard.astro
 import type { Tool } from '../types';
 
-// Use Pick to select only the props this component needs from the main Tool type
-export type Props = Pick<Tool, 'title' | 'link' | 'description' | 'image'>;
+export type Props = Pick<Tool, 'title' | 'link' | 'description' | 'image' | 'tags'>;
 
-const { title, link, description, image } = Astro.props;
+const { title, link, description, image, tags } = Astro.props;
 ---
-<div class="border rounded-lg overflow-hidden shadow-lg bg-white flex flex-col">
+<div class="border rounded-lg overflow-hidden shadow-lg bg-white flex flex-col h-full">
     <a href={link} target="_blank" rel="noopener noreferrer">
-        <img class="w-full h-32 object-cover" src={image} alt={`${title} logo`} />
+        <img class="w-full h-24 object-cover" src={image} alt={`${title} logo`} />
     </a>
-    <div class="p-4 flex flex-col flex-grow">
-        <h3 class="font-bold text-xl mb-2">{title}</h3>
-        <p class="text-gray-700 text-base mb-4 flex-grow">{description}</p>
-        <a href={link} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline mt-auto">
+    <div class="p-3 flex flex-col flex-grow">
+        <h3 class="font-bold text-md mb-2">{title}</h3>
+        <p class="text-gray-600 text-sm mb-3 flex-grow">{description}</p>
+        <div class="mb-3">
+            {tags.slice(0, 3).map(tag => (
+                <span class="inline-block bg-gray-100 rounded-full px-2 py-0.5 text-xs font-semibold text-gray-600 mr-1 mb-1">{tag}</span>
+            ))}
+        </div>
+        <a href={link} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline text-sm mt-auto">
             Visit Tool
         </a>
     </div>

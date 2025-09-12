@@ -10,8 +10,7 @@
       "Free",
       "Self-hosted",
       "On-premises",
-      "All Sizes",
-      "Infrastructure & Performance Monitoring"
+      "All Sizes"
     ],
     "description": "Network monitoring, server monitoring, SNMP, auto-discovery. Notable for being highly scalable, with an extensive plugin ecosystem."
   },
@@ -26,8 +25,7 @@
       "Commercial",
       "Self-hosted",
       "SMB",
-      "Enterprise",
-      "Infrastructure & Performance Monitoring"
+      "Enterprise"
     ],
     "description": "Host/service monitoring, alerting, plugin architecture. Notable for its mature ecosystem and being highly customizable. "
   },
@@ -43,8 +41,7 @@
       "Cloud",
       "SMB",
       "Enterprise",
-      "Freemium",
-      "Infrastructure & Performance Monitoring"
+      "Freemium"
     ],
     "description": "Sensor-based monitoring, drag-drop interface, auto-discovery. Notable for its user-friendly interface and being an all-in-one solution."
   },
@@ -59,8 +56,7 @@
       "On-premises",
       "Hybrid",
       "Enterprise",
-      "Subscription-based",
-      "Infrastructure & Performance Monitoring"
+      "Subscription-based"
     ],
     "description": "Network performance monitoring, topology mapping, advanced analytics. Notable for its enterprise-grade features and modular architecture."
   },
@@ -76,8 +72,7 @@
       "Cloud",
       "SMB",
       "Enterprise",
-      "Per Device",
-      "Infrastructure & Performance Monitoring"
+      "Per Device"
     ],
     "description": "Network monitoring, server monitoring, workflow automation. Notable for offering cost-effective enterprise features."
   },
@@ -91,8 +86,7 @@
       "SaaS",
       "Cloud",
       "All Sizes",
-      "Consumption-based",
-      "Application Performance Monitoring (APM)"
+      "Consumption-based"
     ],
     "description": "Full-stack observability, APM, real user monitoring, synthetic monitoring. Notable for being a comprehensive and developer-friendly platform.",
     "featured": true
@@ -108,8 +102,7 @@
       "On-premises",
       "Hybrid",
       "Enterprise",
-      "Per CPU Core",
-      "Application Performance Monitoring (APM)"
+      "Per CPU Core"
     ],
     "description": "Business transaction monitoring, code-level diagnostics, AI-powered analytics. Notable for its business context correlation and enterprise focus."
   },
@@ -124,8 +117,7 @@
       "Managed",
       "Cloud",
       "Enterprise",
-      "Per Host",
-      "Application Performance Monitoring (APM)"
+      "Per Host"
     ],
     "description": "AI-powered monitoring, automated root cause analysis, full-stack observability. Notable for its Davis AI engine and automated problem detection.",
     "featured": true
@@ -141,8 +133,7 @@
       "Cloud",
       "All Sizes",
       "Per Host",
-      "Per Feature",
-      "Application Performance Monitoring (APM)"
+      "Per Feature"
     ],
     "description": "Unified observability, APM, infrastructure monitoring, log management. Notable for its 850+ integrations and unified platform.",
     "featured": true
@@ -159,8 +150,7 @@
       "Self-hosted",
       "Cloud",
       "All Sizes",
-      "Subscription",
-      "Application Performance Monitoring (APM)"
+      "Subscription"
     ],
     "description": "Distributed tracing, performance monitoring, integrates with ELK Stack. Notable for being part of the Elastic Stack and being cost-effective."
   },
@@ -177,8 +167,7 @@
       "Cloud",
       "All Sizes",
       "Free",
-      "Subscription",
-      "Observability & Analytics Platforms"
+      "Subscription"
     ],
     "description": "Data visualization, dashboards, alerting, multi-source data. Notable for its visualization excellence and extensive data source support.",
     "featured": true
@@ -193,8 +182,7 @@
       "Open Source",
       "Self-hosted",
       "All Sizes",
-      "Free",
-      "Observability & Analytics Platforms"
+      "Free"
     ],
     "description": "Metrics collection, time-series database, alerting. Notable for being a cloud-native monitoring CNCF project."
   },
@@ -208,8 +196,7 @@
       "Open Source",
       "Self-hosted",
       "All Sizes",
-      "Free",
-      "Observability & Analytics Platforms"
+      "Free"
     ],
     "description": "Distributed tracing, performance monitoring, root cause analysis. Notable for being a distributed tracing specialist and a CNCF project."
   },
@@ -224,8 +211,7 @@
       "Cloud",
       "SMB",
       "Enterprise",
-      "Usage-based",
-      "Observability & Analytics Platforms"
+      "Usage-based"
     ],
     "description": "High-cardinality observability, query-driven debugging, distributed tracing. Notable for its modern observability approach and high-cardinality data."
   },
@@ -239,8 +225,7 @@
       "SaaS",
       "Cloud",
       "All Sizes",
-      "Subscription-based",
-      "Observability & Analytics Platforms"
+      "Subscription-based"
     ],
     "description": "Full-stack observability, AI querying, LLM monitoring. Notable for its AI-powered features and modern platform."
   },
@@ -254,8 +239,7 @@
       "SaaS",
       "Cloud",
       "All Sizes",
-      "Per Monitor",
-      "Uptime & Availability Monitoring"
+      "Per Monitor"
     ],
     "description": "Uptime monitoring, synthetic monitoring, RUM, performance insights. Notable for its global monitoring network and being backed by SolarWinds."
   },
@@ -269,8 +253,7 @@
       "SaaS",
       "Cloud",
       "All Sizes",
-      "Freemium",
-      "Uptime & Availability Monitoring"
+      "Freemium"
     ],
     "description": "Website monitoring, SSL monitoring, status pages, multi-location checks. Notable for its available free tier and simple setup."
   },
@@ -284,8 +267,7 @@
       "SaaS",
       "Cloud",
       "All Sizes",
-      "Per Monitor",
-      "Uptime & Availability Monitoring"
+      "Per Monitor"
     ],
     "description": "Synthetic monitoring, uptime monitoring, APM, infrastructure monitoring. Notable for its comprehensive monitoring suite and 130+ monitoring locations."
   },
@@ -299,8 +281,7 @@
       "SaaS",
       "Cloud",
       "Developer-focused",
-      "Per Check",
-      "Uptime & Availability Monitoring"
+      "Per Check"
     ],
     "description": "Monitoring as code, Playwright integration, API monitoring. Notable for being developer-centric with monitoring as code."
   },
@@ -314,8 +295,7 @@
       "SaaS",
       "Cloud",
       "All Sizes",
-      "Freemium",
-      "Uptime & Availability Monitoring"
+      "Freemium"
     ],
     "description": "Uptime monitoring, page speed monitoring, virus scanning. Notable for its affordable pricing and virus scanning feature."
   },
@@ -330,8 +310,7 @@
       "On-premises",
       "Cloud",
       "Enterprise",
-      "Data Volume-based",
-      "Log Management & Analytics"
+      "Data Volume-based"
     ],
     "description": "Log analysis, SIEM, machine learning, real-time search. Notable for its enterprise security focus and powerful search capabilities."
   },
@@ -347,8 +326,7 @@
       "Self-hosted",
       "Cloud",
       "All Sizes",
-      "Subscription",
-      "Log Management & Analytics"
+      "Subscription"
     ],
     "description": "Log aggregation, search, visualization, real-time analytics. Notable for its open source flexibility and powerful search."
   },
@@ -362,8 +340,7 @@
       "Open Source",
       "Self-hosted",
       "All Sizes",
-      "Free",
-      "Log Management & Analytics"
+      "Free"
     ],
     "description": "Log collection, data routing, plugin ecosystem. Notable for being a unified logging layer and a CNCF project."
   },
@@ -377,8 +354,7 @@
       "SaaS",
       "Cloud",
       "All Sizes",
-      "Data Volume-based",
-      "Log Management & Analytics"
+      "Data Volume-based"
     ],
     "description": "ELK as a service, AI-powered insights, security analytics. Notable for being a managed ELK service with AI features."
   },
@@ -392,8 +368,7 @@
       "Cloud Provider",
       "AWS Cloud",
       "All Sizes",
-      "Usage-based",
-      "Cloud-Native Monitoring"
+      "Usage-based"
     ],
     "description": "AWS native monitoring, metrics, logs, alarms, dashboards. Notable for its native AWS integration and comprehensive AWS coverage. "
   },
@@ -407,8 +382,7 @@
       "Cloud Provider",
       "Azure Cloud",
       "All Sizes",
-      "Pay-as-you-go",
-      "Cloud-Native Monitoring"
+      "Pay-as-you-go"
     ],
     "description": "Azure native monitoring, Log Analytics, Application Insights. Notable for its native Azure integration and KQL query language. "
   },
@@ -422,8 +396,7 @@
       "Cloud Provider",
       "GCP Cloud",
       "All Sizes",
-      "Usage-based",
-      "Cloud-Native Monitoring"
+      "Usage-based"
     ],
     "description": "GCP native monitoring, custom metrics, alerting policies. Notable for its native GCP integration and machine learning insights. "
   },
@@ -437,8 +410,7 @@
       "SaaS",
       "Cloud",
       "Enterprise",
-      "Subscription-based",
-      "Security & Compliance Monitoring"
+      "Subscription-based"
     ],
     "description": "CNAPP, CSPM, agentless scanning, attack path analysis. Notable for its comprehensive cloud security and attack path visualization."
   },
@@ -452,8 +424,7 @@
       "SaaS",
       "Cloud",
       "Enterprise",
-      "Per Workload",
-      "Security & Compliance Monitoring"
+      "Per Workload"
     ],
     "description": "CWPP, CSPM, compliance monitoring, threat detection. Notable for being a Palo Alto Networks platform with comprehensive security."
   },
@@ -468,8 +439,7 @@
       "On-premises",
       "Hybrid",
       "Enterprise",
-      "Per Workload",
-      "Security & Compliance Monitoring"
+      "Per Workload"
     ],
     "description": "Container security, runtime protection, compliance scanning. Notable for its container security focus and runtime protection. "
   },
@@ -483,8 +453,7 @@
       "SaaS",
       "Cloud",
       "All Sizes",
-      "Subscription-based",
-      "Cost Management & FinOps"
+      "Subscription-based"
     ],
     "description": "Unit cost analysis, cost allocation without tags, anomaly detection. Notable for its tagless cost allocation and engineering-focus.",
     "featured": true
@@ -499,8 +468,7 @@
       "SaaS",
       "Cloud",
       "Enterprise",
-      "Subscription-based",
-      "Cost Management & FinOps"
+      "Subscription-based"
     ],
     "description": "Virtual tagging, MegaBill, multi-cloud cost management. Notable for its virtual tagging technology and enterprise focus."
   },
@@ -514,8 +482,7 @@
       "SaaS",
       "Cloud",
       "Enterprise",
-      "Percentage of Spend",
-      "Cost Management & FinOps"
+      "Percentage of Spend"
     ],
     "description": "Cost optimization, governance, policy management. Notable for its VMware integration and enterprise governance."
   },
@@ -530,8 +497,7 @@
       "On-premises",
       "Hybrid",
       "Enterprise",
-      "Subscription-based",
-      "Cost Management & FinOps"
+      "Subscription-based"
     ],
     "description": "ITAM, software licensing, cloud cost management. Notable for its comprehensive IT asset management."
   },
@@ -545,8 +511,7 @@
       "SaaS",
       "Cloud",
       "Developer-focused",
-      "Per Check",
-      "Synthetic Monitoring"
+      "Per Check"
     ],
     "description": "Monitoring as code, Playwright tests, API monitoring. Notable for its developer workflow integration."
   },
@@ -560,8 +525,7 @@
       "SaaS",
       "Cloud",
       "All Sizes",
-      "Per Test",
-      "Synthetic Monitoring"
+      "Per Test"
     ],
     "description": "Browser tests, API tests, mobile app testing. Notable for being part of the unified Datadog platform."
   },
@@ -575,8 +539,7 @@
       "SaaS",
       "Cloud",
       "SMB",
-      "Per Test",
-      "Synthetic Monitoring"
+      "Per Test"
     ],
     "description": "Website testing, automated regression testing, CI/CD integration. Notable for its easy test creation and regression testing focus."
   }

@@ -1,0 +1,53 @@
+---
+// src/components/Search.astro
+---
+<div class="relative">
+    <input 
+        type="search" 
+        id="searchInput"
+        placeholder="Search for tools..." 
+        class="w-full p-3 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+    >
+    <div id="suggestions" class="absolute z-10 w-full mt-1 bg-white border rounded-md shadow-lg hidden"></div>
+</div>
+
+<script>
+    import type { Tool } from '../types'; // Import the Tool type
+
+    const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+    const suggestionsContainer = document.getElementById('suggestions');
+
+    // Check if both elements exist before adding event listeners
+    if (searchInput && suggestionsContainer) {
+        searchInput.addEventListener('input', async () => {
+            const query = searchInput.value.trim();
+
+            if (query.length < 2) {
+                suggestionsContainer.innerHTML = '';
+                suggestionsContainer.classList.add('hidden');
+                return;
+            }
+
+            const response = await fetch(`/api/search?q=${query}`);
+            // Explicitly type the results as an array of Tool objects
+            const results: Tool[] = await response.json();
+
+            if (results.length > 0) {
+                // Now TypeScript knows that 'tool' is of type Tool
+                suggestionsContainer.innerHTML = results.map(tool => 
+                    `<a href="${tool.link}" target="_blank" rel="noopener noreferrer" class="block p-2 hover:bg-gray-100">${tool.title}</a>`
+                ).join('');
+                suggestionsContainer.classList.remove('hidden');
+            } else {
+                suggestionsContainer.innerHTML = '<div class="p-2 text-gray-500">No results found</div>';
+                suggestionsContainer.classList.remove('hidden');
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!suggestionsContainer.contains(event.target as Node) && event.target !== searchInput) {
+                suggestionsContainer.classList.add('hidden');
+            }
+        });
+    }
+</script>
