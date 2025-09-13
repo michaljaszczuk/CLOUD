@@ -30,11 +30,10 @@ const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
 
             <div class="mb-6">
                
-                 <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-2">
                     {allTags.map(tag => (
                         <button class="tag-pill bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 px-2 py-0.5 text-xs rounded-full" data-tag={tag}>
                             {tag}
-        
                         </button>
                     ))}
                 </div>
@@ -47,8 +46,8 @@ const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
                     placeholder="Search for tools..." 
                     class="w-full sm:w-auto p-2 text-sm border rounded-md focus:ring-blue-500 focus:border-blue-500 flex-grow dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 >
-                <div id="suggestions" class="absolute z-10 w-full mt-12 bg-white border rounded-md shadow-lg hidden"></div>
-                <button class="bg-blue-600 text-white px-4 py-2 text-sm rounded-md hover:bg-blue-700 transition-colors duration-200">Search</button>
+                <div id="suggestions" class="absolute z-10 w-full bg-white border rounded-md shadow-lg hidden" style="top: 100%;"></div>
+                <button id="searchButton" class="bg-blue-600 text-white px-4 py-2 text-sm rounded-md hover:bg-blue-700 transition-colors duration-200">Search</button>
             </div>
 
             {Object.entries(toolsByCategory).map(([category, categoryTools]) => (
@@ -58,20 +57,16 @@ const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
                     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
                         {categoryTools.map(tool => (
                             <div class="tool-card" data-tags={tool.tags.join(',')}>
-      
-                                 <ToolCard
+                                <ToolCard
                                     title={tool.title}
                                     link={tool.link}
-  
                                     description={tool.description}
                                     image={tool.image}
-                              
                                     tags={tool.tags}
                                 />
                             </div>
                         ))}
-          
-                     </div>
+                    </div>
                 </section>
             ))}
         </div>
@@ -91,91 +86,118 @@ const allTags = [...new Set(tools.flatMap(tool => tool.tags))];
 <script>
     import type { Tool } from '../types';
     document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+        const searchButton = document.getElementById('searchButton');
+        const suggestionsContainer = document.getElementById('suggestions');
         const tagPills = document.querySelectorAll('.tag-pill') as NodeListOf<HTMLElement>;
         const categorySections = document.querySelectorAll('.category-section') as NodeListOf<HTMLElement>;
-        let selectedTags = new Set<string>();
 
         const unselectedClasses = ['bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-200', 'hover:bg-gray-300', 'dark:hover:bg-gray-600'];
         const selectedClasses = ['bg-blue-600', 'dark:bg-blue-500', 'text-white'];
 
-        tagPills.forEach(pill => {
-            pill.addEventListener('click', () => {
- 
-               const tag = pill.getAttribute('data-tag');
-                if (tag) {
-                    if (selectedTags.has(tag)) {
-                        selectedTags.delete(tag);
-                  
-                       pill.classList.remove(...selectedClasses);
-                        pill.classList.add(...unselectedClasses);
-                    } else {
-                        selectedTags.add(tag);
-                        pill.classList.remove(...unselectedClasses);
-                        pill.classList.add(...selectedClasses);
-                    }
-                    filterTools();
+        function filterContent() {
+            const searchQuery = searchInput.value.toLowerCase().trim();
+            const selectedTags = new Set<string>();
+            tagPills.forEach(pill => {
+                if(pill.classList.contains('bg-blue-600')) {
+                    const tag = pill.getAttribute('data-tag');
+                    if(tag) selectedTags.add(tag);
                 }
             });
-        });
-        function filterTools() {
+
             categorySections.forEach(section => {
                 let visibleCardsCount = 0;
                 const toolCardsInSection = section.querySelectorAll<HTMLElement>('.tool-card');
 
                 toolCardsInSection.forEach(card => {
                     const toolTagsAttribute = card.getAttribute('data-tags');
-     
-                    if (toolTagsAttribute) {
-                        const toolTags = new Set(toolTagsAttribute.split(',').map(t => t.trim()));
-                        const isVisible = selectedTags.size === 0 || [...selectedTags].every(tag => toolTags.has(tag));
-                    
-                        
-                        card.style.display = isVisible ? 'block' : 'none';
-                        if (isVisible) {
-                            visibleCardsCount++;
-            
-                         }
+                    const title = card.querySelector('h3')?.textContent?.toLowerCase() || '';
+                    const description = card.querySelector('p')?.textContent?.toLowerCase() || '';
+
+                    const matchesSearch = !searchQuery || title.includes(searchQuery) || description.includes(searchQuery) || (toolTagsAttribute && toolTagsAttribute.toLowerCase().includes(searchQuery));
+
+                    const toolTags = new Set(toolTagsAttribute ? toolTagsAttribute.split(',').map(t => t.trim()) : []);
+                    const matchesTags = selectedTags.size === 0 || [...selectedTags].every(tag => toolTags.has(tag));
+
+                    const isVisible = matchesSearch && matchesTags;
+
+                    card.style.display = isVisible ? 'block' : 'none';
+                    if (isVisible) {
+                        visibleCardsCount++;
                     }
                 });
 
                 const categoryHasVisibleTools = visibleCardsCount > 0;
-                section.style.display = categoryHasVisibleTools ?
-                    'block' : 'none';
+                section.style.display = categoryHasVisibleTools ? 'block' : 'none';
+            });
+        }
+
+        tagPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                const tag = pill.getAttribute('data-tag');
+                if (tag) {
+                    if (pill.classList.contains('bg-blue-600')) {
+                        pill.classList.remove(...selectedClasses);
+                        pill.classList.add(...unselectedClasses);
+                    } else {
+                        pill.classList.remove(...unselectedClasses);
+                        pill.classList.add(...selectedClasses);
+                    }
+                    filterContent();
+                }
+            });
+        });
+
+        if (searchButton) {
+            searchButton.addEventListener('click', filterContent);
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    filterContent();
+                    if(suggestionsContainer) suggestionsContainer.classList.add('hidden');
+                }
+            });
+
+            // As-you-type search suggestions and clear functionality
+            searchInput.addEventListener('input', async () => {
+                const query = searchInput.value.trim();
+
+                if (query === "") {
+                    filterContent(); // Reset the list
+                }
+
+                if (!suggestionsContainer) return;
+
+                if (query.length < 2) {
+                    suggestionsContainer.innerHTML = '';
+                    suggestionsContainer.classList.add('hidden');
+                    return;
+                }
+
+                const response = await fetch(`/api/search?q=${query}`);
+                const results: Tool[] = await response.json();
+
+                if (results.length > 0) {
+                    suggestionsContainer.innerHTML = results.map((tool: Tool) =>
+                        `<a href="${tool.link}" target="_blank" rel="noopener noreferrer" class="block p-2 hover:bg-gray-100">${tool.title}</a>`
+                    ).join('');
+                    suggestionsContainer.classList.remove('hidden');
+                } else {
+                    suggestionsContainer.innerHTML = '<div class="p-2 text-gray-500">No results found</div>';
+                    suggestionsContainer.classList.remove('hidden');
+                }
+            });
+        }
+
+        if (suggestionsContainer) {
+            document.addEventListener('click', (event) => {
+                if (!suggestionsContainer.contains(event.target as Node) && event.target !== searchInput) {
+                    suggestionsContainer.classList.add('hidden');
+                }
             });
         }
     });
-
-    const searchInput = document.getElementById('searchInput') as HTMLInputElement;
-    const suggestionsContainer = document.getElementById('suggestions');
-    if (searchInput && suggestionsContainer) {
-        searchInput.addEventListener('input', async () => {
-            const query = searchInput.value.trim();
-
-            if (query.length < 2) {
-                suggestionsContainer.innerHTML = '';
-                suggestionsContainer.classList.add('hidden');
-      
-                 return;
-            }
-
-            const response = await fetch(`/api/search?q=${query}`);
-            const results: Tool[] = await response.json();
-
-            if (results.length > 0) {
-       
-                suggestionsContainer.innerHTML = results.map((tool: Tool) => 
-                    `<a href="${tool.link}" target="_blank" rel="noopener noreferrer" class="block p-2 hover:bg-gray-100">${tool.title}</a>`
-                ).join('');
-                suggestionsContainer.classList.remove('hidden');
-            } else {
-                suggestionsContainer.innerHTML = '<div class="p-2 text-gray-500">No results found</div>';
-                suggestionsContainer.classList.remove('hidden');
-            }
-        });
-        document.addEventListener('click', (event) => {
-            if (suggestionsContainer && !suggestionsContainer.contains(event.target as Node) && event.target !== searchInput) {
-                suggestionsContainer.classList.add('hidden');
-            }
-        });
-    }
 </script>

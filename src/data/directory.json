@@ -361,7 +361,7 @@
   {
     "id": "aws-cloudwatch",
     "title": "AWS CloudWatch",
-    "image": "public/images/aws.png",
+    "image": "/images/aws.png",
     "link": "https://aws.amazon.com/cloudwatch/",
     "category": "Cloud-Native Monitoring",
     "tags": [
